@@ -1,0 +1,45 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\vlady\\source\\repos\\beFit\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E65AB8-08DA-4FF4-B784-FEDD2D49DE9A}|beFit.csproj|c:\\users\\vlady\\source\\repos\\befit\\befit.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A7E65AB8-08DA-4FF4-B784-FEDD2D49DE9A}|beFit.csproj|solutionrelative:befit.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "beFit.csproj",
+              "DocumentMoniker": "C:\\Users\\vlady\\source\\repos\\beFit\\beFit.csproj",
+              "RelativeDocumentMoniker": "beFit.csproj",
+              "ToolTip": "C:\\Users\\vlady\\source\\repos\\beFit\\beFit.csproj",
+              "RelativeToolTip": "beFit.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-29T14:35:23.554Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
