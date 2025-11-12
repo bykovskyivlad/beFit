@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("beFit")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8888abdb25fed11e6c09dccd9393f40ce27b2905")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5663824d5fd285bd4353cef413dd61bd752dd65a")]
 [assembly: System.Reflection.AssemblyProductAttribute("beFit")]
 [assembly: System.Reflection.AssemblyTitleAttribute("beFit")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
