@@ -4,7 +4,12 @@ namespace beFit.Models
 {
     public class TrainingSession
     {
+
         public int Id { get; set; }
+        public string UserId { get; set; }
+        public AppUser User { get; set; }
+        
+
 
         [Display(Name = "Start Time")]
         [DataType(DataType.DateTime)]

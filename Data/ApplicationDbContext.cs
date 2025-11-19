@@ -4,7 +4,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace beFit.Data
 {
-    public class ApplicationDbContext : IdentityDbContext
+    public class ApplicationDbContext : IdentityDbContext<AppUser>
+
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)

@@ -1,22 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using beFit.Data;
+using beFit.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using beFit.Data;
-using beFit.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace beFit.Controllers
 {
     public class TrainingSessionsController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly UserManager<AppUser> _userManager;
 
-        public TrainingSessionsController(ApplicationDbContext context)
+        public TrainingSessionsController(ApplicationDbContext context, UserManager<AppUser> userManager)
         {
             _context = context;
+            _userManager = userManager;
+        }
+
+        private string GetUserId()
+        {
+            return _userManager.GetUserId(User);
         }
 
         // GET: TrainingSessions
@@ -54,15 +62,23 @@ namespace beFit.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,StartTime,EndTime")] TrainingSession trainingSession)
+        public async Task<IActionResult> Create(beFit.Models.DTO.TrainingSessionDTO dto)
         {
             if (ModelState.IsValid)
             {
+                var trainingSession = new TrainingSession
+                {
+                    StartTime = dto.StartTime,
+                    EndTime = dto.EndTime,
+                    UserId = GetUserId()
+                };
+
                 _context.Add(trainingSession);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(trainingSession);
+
+            return View(dto);
         }
 
         // GET: TrainingSessions/Edit/5

@@ -6,6 +6,9 @@ namespace beFit.Models
     {
         public int Id { get; set; }
         [Display(Name = "Exercise Type")]
+        public string UserId { get; set; }
+        public AppUser User { get; set; }
+
         public int ExerciseTypeId { get; set; }
         public virtual ExerciseType? ExerciseType { get; set; }
         [Display(Name = "Training Session")]

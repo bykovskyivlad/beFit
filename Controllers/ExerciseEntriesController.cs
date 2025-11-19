@@ -1,22 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using beFit.Data;
+using beFit.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using beFit.Data;
-using beFit.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace beFit.Controllers
 {
     public class ExerciseEntriesController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly UserManager<AppUser> _userManager;
 
-        public ExerciseEntriesController(ApplicationDbContext context)
+        public ExerciseEntriesController(ApplicationDbContext context, UserManager<AppUser> userManager)
         {
             _context = context;
+            _userManager = userManager;
+        }
+        private string GetUserId()
+        {
+            return _userManager.GetUserId(User);
         }
 
         // GET: ExerciseEntries
@@ -59,18 +66,31 @@ namespace beFit.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,ExerciseTypeId,TrainingSessionId,Load,Sets,Reps")] ExerciseEntry exerciseEntry)
+        public async Task<IActionResult> Create(beFit.Models.DTO.ExerciseEntryDTO dto)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(exerciseEntry);
+                var entry = new ExerciseEntry
+                {
+                    ExerciseTypeId = dto.ExerciseTypeId,
+                    TrainingSessionId = dto.TrainingSessionId,
+                    Load = dto.Load,
+                    Sets = dto.Sets,
+                    Reps = dto.Reps,
+                    UserId = GetUserId()
+                };
+
+                _context.Add(entry);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["ExerciseTypeId"] = new SelectList(_context.ExerciseTypes, "Id", "Name", exerciseEntry.ExerciseTypeId);
-            ViewData["TrainingSessionId"] = new SelectList(_context.TrainingSessions, "Id", "StartTime", exerciseEntry.TrainingSessionId);
-            return View(exerciseEntry);
+
+            ViewData["ExerciseTypeId"] = new SelectList(_context.ExerciseTypes, "Id", "Name", dto.ExerciseTypeId);
+            ViewData["TrainingSessionId"] = new SelectList(_context.TrainingSessions, "Id", "StartTime", dto.TrainingSessionId);
+
+            return View(dto);
         }
+
 
         // GET: ExerciseEntries/Edit/5
         public async Task<IActionResult> Edit(int? id)
