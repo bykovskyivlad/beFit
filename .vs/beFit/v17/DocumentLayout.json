@@ -3,6 +3,26 @@
   "WorkspaceRootPath": "C:\\Users\\vlady\\source\\repos\\beFit\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A7E65AB8-08DA-4FF4-B784-FEDD2D49DE9A}|beFit.csproj|c:\\users\\vlady\\source\\repos\\befit\\views\\stats\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A7E65AB8-08DA-4FF4-B784-FEDD2D49DE9A}|beFit.csproj|solutionrelative:views\\stats\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E65AB8-08DA-4FF4-B784-FEDD2D49DE9A}|beFit.csproj|c:\\users\\vlady\\source\\repos\\befit\\controllers\\statscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E65AB8-08DA-4FF4-B784-FEDD2D49DE9A}|beFit.csproj|solutionrelative:controllers\\statscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E65AB8-08DA-4FF4-B784-FEDD2D49DE9A}|beFit.csproj|c:\\users\\vlady\\source\\repos\\befit\\models\\viewmodels\\exercisestats.cs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E65AB8-08DA-4FF4-B784-FEDD2D49DE9A}|beFit.csproj|solutionrelative:models\\viewmodels\\exercisestats.cs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E65AB8-08DA-4FF4-B784-FEDD2D49DE9A}|beFit.csproj|c:\\users\\vlady\\source\\repos\\befit\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A7E65AB8-08DA-4FF4-B784-FEDD2D49DE9A}|beFit.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E65AB8-08DA-4FF4-B784-FEDD2D49DE9A}|beFit.csproj|c:\\users\\vlady\\source\\repos\\befit\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A7E65AB8-08DA-4FF4-B784-FEDD2D49DE9A}|beFit.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A7E65AB8-08DA-4FF4-B784-FEDD2D49DE9A}|beFit.csproj|c:\\users\\vlady\\source\\repos\\befit\\controllers\\trainingsessionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A7E65AB8-08DA-4FF4-B784-FEDD2D49DE9A}|beFit.csproj|solutionrelative:controllers\\trainingsessionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -65,10 +85,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A7E65AB8-08DA-4FF4-B784-FEDD2D49DE9A}|beFit.csproj|c:\\users\\vlady\\source\\repos\\befit\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{A7E65AB8-08DA-4FF4-B784-FEDD2D49DE9A}|beFit.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A7E65AB8-08DA-4FF4-B784-FEDD2D49DE9A}|beFit.csproj|c:\\users\\vlady\\source\\repos\\befit\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A7E65AB8-08DA-4FF4-B784-FEDD2D49DE9A}|beFit.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -78,11 +94,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 3,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\vlady\\source\\repos\\beFit\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
@@ -91,11 +107,12 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-10-29T15:16:27.444Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\vlady\\source\\repos\\beFit\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
@@ -116,20 +133,72 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ExerciseStats.cs.cs",
+              "DocumentMoniker": "C:\\Users\\vlady\\source\\repos\\beFit\\Models\\ViewModels\\ExerciseStats.cs.cs",
+              "RelativeDocumentMoniker": "Models\\ViewModels\\ExerciseStats.cs.cs",
+              "ToolTip": "C:\\Users\\vlady\\source\\repos\\beFit\\Models\\ViewModels\\ExerciseStats.cs.cs",
+              "RelativeToolTip": "Models\\ViewModels\\ExerciseStats.cs.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T15:17:17.98Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\vlady\\source\\repos\\beFit\\Views\\Stats\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Stats\\Index.cshtml",
+              "ToolTip": "C:\\Users\\vlady\\source\\repos\\beFit\\Views\\Stats\\Index.cshtml",
+              "RelativeToolTip": "Views\\Stats\\Index.cshtml",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAwBsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-19T15:16:07.748Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StatsController.cs",
+              "DocumentMoniker": "C:\\Users\\vlady\\source\\repos\\beFit\\Controllers\\StatsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\StatsController.cs",
+              "ToolTip": "C:\\Users\\vlady\\source\\repos\\beFit\\Controllers\\StatsController.cs",
+              "RelativeToolTip": "Controllers\\StatsController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T15:09:04.957Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\vlady\\source\\repos\\beFit\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\vlady\\source\\repos\\beFit\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAACAAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-19T15:05:22.14Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "TrainingSessionsController.cs",
               "DocumentMoniker": "C:\\Users\\vlady\\source\\repos\\beFit\\Controllers\\TrainingSessionsController.cs",
               "RelativeDocumentMoniker": "Controllers\\TrainingSessionsController.cs",
               "ToolTip": "C:\\Users\\vlady\\source\\repos\\beFit\\Controllers\\TrainingSessionsController.cs",
               "RelativeToolTip": "Controllers\\TrainingSessionsController.cs",
-              "ViewState": "AgIAAJMAAAAAAAAAAAAAAJ0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAIgAAAAAAAAAAADwv50AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-12T15:50:03.341Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "ExerciseTypesController.cs",
               "DocumentMoniker": "C:\\Users\\vlady\\source\\repos\\beFit\\Controllers\\ExerciseTypesController.cs",
               "RelativeDocumentMoniker": "Controllers\\ExerciseTypesController.cs",
@@ -137,12 +206,11 @@
               "RelativeToolTip": "Controllers\\ExerciseTypesController.cs",
               "ViewState": "AgIAAIUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T15:49:31.22Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-12T15:49:31.22Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "ExerciseEntriesController.cs",
               "DocumentMoniker": "C:\\Users\\vlady\\source\\repos\\beFit\\Controllers\\ExerciseEntriesController.cs",
               "RelativeDocumentMoniker": "Controllers\\ExerciseEntriesController.cs",
@@ -150,12 +218,11 @@
               "RelativeToolTip": "Controllers\\ExerciseEntriesController.cs",
               "ViewState": "AgIAAJAAAAAAAAAAAAAcwKoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T15:48:15.155Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-12T15:48:15.155Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "ApplicationDbContextModelSnapshot.cs",
               "DocumentMoniker": "C:\\Users\\vlady\\source\\repos\\beFit\\Migrations\\ApplicationDbContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "Migrations\\ApplicationDbContextModelSnapshot.cs",
@@ -167,7 +234,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "20251112151056_beFitModels.cs",
               "DocumentMoniker": "C:\\Users\\vlady\\source\\repos\\beFit\\Migrations\\20251112151056_beFitModels.cs",
               "RelativeDocumentMoniker": "Migrations\\20251112151056_beFitModels.cs",
@@ -175,12 +242,11 @@
               "RelativeToolTip": "Migrations\\20251112151056_beFitModels.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T15:10:56.222Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-12T15:10:56.222Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "20251112150955_BeFitModels.cs",
               "DocumentMoniker": "C:\\Users\\vlady\\source\\repos\\beFit\\Migrations\\20251112150955_BeFitModels.cs",
               "RelativeDocumentMoniker": "Migrations\\20251112150955_BeFitModels.cs",
@@ -192,7 +258,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
               "Title": "ExerciseEntry.cs",
               "DocumentMoniker": "C:\\Users\\vlady\\source\\repos\\beFit\\Models\\ExerciseEntry.cs",
               "RelativeDocumentMoniker": "Models\\ExerciseEntry.cs",
@@ -204,7 +270,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "TrainingSession.cs",
               "DocumentMoniker": "C:\\Users\\vlady\\source\\repos\\beFit\\Models\\TrainingSession.cs",
               "RelativeDocumentMoniker": "Models\\TrainingSession.cs",
@@ -216,7 +282,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
               "Title": "ExerciseType.cs",
               "DocumentMoniker": "C:\\Users\\vlady\\source\\repos\\beFit\\Models\\ExerciseType.cs",
               "RelativeDocumentMoniker": "Models\\ExerciseType.cs",
@@ -228,7 +294,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 20,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\vlady\\source\\repos\\beFit\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -240,7 +306,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 17,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\vlady\\source\\repos\\beFit\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -252,7 +318,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 18,
               "Title": "ErrorViewModel.cs",
               "DocumentMoniker": "C:\\Users\\vlady\\source\\repos\\beFit\\Models\\ErrorViewModel.cs",
               "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
@@ -264,7 +330,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\vlady\\source\\repos\\beFit\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
@@ -272,12 +338,11 @@
               "RelativeToolTip": "Controllers\\HomeController.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAAABEAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T15:11:53.74Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-29T15:11:53.74Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
               "Title": "_ViewStart.cshtml",
               "DocumentMoniker": "C:\\Users\\vlady\\source\\repos\\beFit\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\_ViewStart.cshtml",
@@ -289,7 +354,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 19,
               "Title": "beFit.csproj",
               "DocumentMoniker": "C:\\Users\\vlady\\source\\repos\\beFit\\beFit.csproj",
               "RelativeDocumentMoniker": "beFit.csproj",

@@ -1,0 +1,27 @@
+﻿@model IEnumerable<beFit.Models.ViewModels.ExerciseStats>
+
+<h2>Exercise Statistics</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Exercise</th>
+            <th>Sessions (last 4 weeks)</th>
+            <th>Total Repetitions</th>
+            <th>Average Load</th>
+            <th>Max Load</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ExerciseName</td>
+                <td>@item.TotalSessions</td>
+                <td>@item.TotalReps</td>
+                <td>@item.AverageLoad</td>
+                <td>@item.MaxLoad</td>
+            </tr>
+        }
+    </tbody>
+</table>
