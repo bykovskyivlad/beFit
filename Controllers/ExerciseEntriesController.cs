@@ -1,5 +1,6 @@
 ﻿using beFit.Data;
 using beFit.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -11,6 +12,7 @@ using System.Threading.Tasks;
 
 namespace beFit.Controllers
 {
+    [Authorize]
     public class ExerciseEntriesController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -27,11 +29,20 @@ namespace beFit.Controllers
         }
 
         // GET: ExerciseEntries
+        [Authorize]
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.ExerciseEntries.Include(e => e.ExerciseType).Include(e => e.TrainingSession);
-            return View(await applicationDbContext.ToListAsync());
+            var userId = GetUserId();
+
+            var entries = await _context.ExerciseEntries
+                .Include(e => e.ExerciseType)
+                .Include(e => e.TrainingSession)
+                .Where(e => e.UserId == userId)
+                .ToListAsync();
+
+            return View(entries);
         }
+
 
         // GET: ExerciseEntries/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -49,6 +60,8 @@ namespace beFit.Controllers
             {
                 return NotFound();
             }
+            if (exerciseEntry.UserId != GetUserId())
+                return NotFound();
 
             return View(exerciseEntry);
         }
@@ -107,6 +120,8 @@ namespace beFit.Controllers
             }
             ViewData["ExerciseTypeId"] = new SelectList(_context.ExerciseTypes, "Id", "Name", exerciseEntry.ExerciseTypeId);
             ViewData["TrainingSessionId"] = new SelectList(_context.TrainingSessions, "Id", "StartTime", exerciseEntry.TrainingSessionId);
+            if (exerciseEntry.UserId != GetUserId())
+                return NotFound();
             return View(exerciseEntry);
         }
 
@@ -121,6 +136,9 @@ namespace beFit.Controllers
             {
                 return NotFound();
             }
+            if (exerciseEntry.UserId != GetUserId())
+                return NotFound();
+
 
             if (ModelState.IsValid)
             {
@@ -155,6 +173,7 @@ namespace beFit.Controllers
                 return NotFound();
             }
 
+
             var exerciseEntry = await _context.ExerciseEntries
                 .Include(e => e.ExerciseType)
                 .Include(e => e.TrainingSession)
@@ -162,7 +181,11 @@ namespace beFit.Controllers
             if (exerciseEntry == null)
             {
                 return NotFound();
+
             }
+            if (exerciseEntry.UserId != GetUserId())
+                return NotFound();
+
 
             return View(exerciseEntry);
         }
@@ -172,7 +195,15 @@ namespace beFit.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
+
             var exerciseEntry = await _context.ExerciseEntries.FindAsync(id);
+            
+
+                if (exerciseEntry.UserId != GetUserId())
+                return NotFound();
+            if (exerciseEntry.UserId != GetUserId())
+                return NotFound();
+
             if (exerciseEntry != null)
             {
                 _context.ExerciseEntries.Remove(exerciseEntry);

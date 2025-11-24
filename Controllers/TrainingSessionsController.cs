@@ -1,5 +1,6 @@
 ﻿using beFit.Data;
 using beFit.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -11,6 +12,7 @@ using System.Threading.Tasks;
 
 namespace beFit.Controllers
 {
+    [Authorize]
     public class TrainingSessionsController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -27,10 +29,16 @@ namespace beFit.Controllers
             return _userManager.GetUserId(User);
         }
 
-        // GET: TrainingSessions
+        [Authorize]
         public async Task<IActionResult> Index()
         {
-            return View(await _context.TrainingSessions.ToListAsync());
+            var userId = GetUserId();
+
+            var sessions = await _context.TrainingSessions
+                .Where(s => s.UserId == userId)
+                .ToListAsync();
+
+            return View(sessions);
         }
 
         // GET: TrainingSessions/Details/5
@@ -43,10 +51,13 @@ namespace beFit.Controllers
 
             var trainingSession = await _context.TrainingSessions
                 .FirstOrDefaultAsync(m => m.Id == id);
+
             if (trainingSession == null)
             {
                 return NotFound();
             }
+            if (trainingSession.UserId != GetUserId())
+                return NotFound();
 
             return View(trainingSession);
         }
@@ -94,6 +105,8 @@ namespace beFit.Controllers
             {
                 return NotFound();
             }
+            if (trainingSession.UserId != GetUserId())
+                return NotFound();
             return View(trainingSession);
         }
 
@@ -108,6 +121,8 @@ namespace beFit.Controllers
             {
                 return NotFound();
             }
+            if (trainingSession.UserId != GetUserId())
+                return NotFound();
 
             if (ModelState.IsValid)
             {
@@ -146,7 +161,8 @@ namespace beFit.Controllers
             {
                 return NotFound();
             }
-
+            if (trainingSession.UserId != GetUserId())
+                return NotFound();
             return View(trainingSession);
         }
 
@@ -156,14 +172,18 @@ namespace beFit.Controllers
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var trainingSession = await _context.TrainingSessions.FindAsync(id);
-            if (trainingSession != null)
-            {
-                _context.TrainingSessions.Remove(trainingSession);
-            }
 
+            if (trainingSession == null)
+                return NotFound();
+
+            if (trainingSession.UserId != GetUserId())
+                return NotFound();
+
+            _context.TrainingSessions.Remove(trainingSession);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+
 
         private bool TrainingSessionExists(int id)
         {
