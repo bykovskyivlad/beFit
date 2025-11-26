@@ -45,7 +45,7 @@ namespace beFit
 
             app.UseRouting();
 
-            app.UseAuthentication(); // 🚀 koniecznie dodaj
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapControllerRoute(
